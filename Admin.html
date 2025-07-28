@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - จัดการ Stock ของที่ระลึก 30 ปี คอมพิวเตอร์</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-white min-h-screen font-sans">
+
+  <header class="bg-blue-600 text-white p-6 text-center text-2xl font-bold">
+    Admin - จัดการ Stock สินค้า 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-10">
+
+    <!-- เสื้อ -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 border-b-2 border-blue-400 pb-2">Stock เสื้อ</h2>
+      <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label for="shirt-color" class="block font-medium text-gray-700 mb-1">สี</label>
+            <input type="text" id="shirt-color" name="shirt-color" placeholder="เช่น ขาว, ดำ" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div>
+            <label for="shirt-size" class="block font-medium text-gray-700 mb-1">ขนาด</label>
+            <select id="shirt-size" name="shirt-size" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              <option value="">-- เลือกขนาด --</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+            </select>
+          </div>
+          <div>
+            <label for="shirt-price" class="block font-medium text-gray-700 mb-1">ราคา (บาท)</label>
+            <input type="number" id="shirt-price" name="shirt-price" min="0" placeholder="ราคา" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+        </div>
+
+        <div>
+          <label for="shirt-image" class="block font-medium text-gray-700 mb-1">รูปภาพสินค้า</label>
+          <input type="file" id="shirt-image" name="shirt-image" accept="image/*"
+            class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4
+            file:rounded file:border-0 file:text-sm file:font-semibold
+            file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200" />
+        </div>
+
+        <button type="submit" 
+          class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+          เพิ่ม/แก้ไข เสื้อ
+        </button>
+      </form>
+    </section>
+
+    <!-- กระเป๋า -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 border-b-2 border-blue-400 pb-2">Stock กระเป๋า</h2>
+      <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="bag-color" class="block font-medium text-gray-700 mb-1">สี</label>
+            <input type="text" id="bag-color" name="bag-color" placeholder="เช่น น้ำเงิน, แดง" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div>
+            <label for="bag-price" class="block font-medium text-gray-700 mb-1">ราคา (บาท)</label>
+            <input type="number" id="bag-price" name="bag-price" min="0" placeholder="ราคา" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+        </div>
+
+        <div>
+          <label for="bag-image" class="block font-medium text-gray-700 mb-1">รูปภาพสินค้า</label>
+          <input type="file" id="bag-image" name="bag-image" accept="image/*"
+            class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4
+            file:rounded file:border-0 file:text-sm file:font-semibold
+            file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200" />
+        </div>
+
+        <button type="submit" 
+          class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+          เพิ่ม/แก้ไข กระเป๋า
+        </button>
+      </form>
+    </section>
+
+    <!-- แก้ว -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 border-b-2 border-blue-400 pb-2">Stock แก้ว</h2>
+      <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="mug-color" class="block font-medium text-gray-700 mb-1">สี</label>
+            <input type="text" id="mug-color" name="mug-color" placeholder="เช่น ขาว, ดำ" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div>
+            <label for="mug-price" class="block font-medium text-gray-700 mb-1">ราคา (บาท)</label>
+            <input type="number" id="mug-price" name="mug-price" min="0" placeholder="ราคา" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+        </div>
+
+        <div>
+          <label for="mug-image" class="block font-medium text-gray-700 mb-1">รูปภาพสินค้า</label>
+          <input type="file" id="mug-image" name="mug-image" accept="image/*"
+            class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4
+            file:rounded file:border-0 file:text-sm file:font-semibold
+            file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200" />
+        </div>
+
+        <button type="submit" 
+          class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+          เพิ่ม/แก้ไข แก้ว
+        </button>
+      </form>
+    </section>
+
+    <!-- หมวก, ร่ม, เข็มกลัด, สมุด, ปากกา -->
+    <section>
+      <h2 class="text-xl font-semibold mb-4 border-b-2 border-blue-400 pb-2">Stock หมวก, ร่ม, เข็มกลัด, สมุด, ปากกา</h2>
+      <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="other-item-name" class="block font-medium text-gray-700 mb-1">ชื่อสินค้า</label>
+            <input type="text" id="other-item-name" name="other-item-name" placeholder="เช่น หมวก, ร่ม" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+          <div>
+            <label for="other-item-price" class="block font-medium text-gray-700 mb-1">ราคา (บาท)</label>
+            <input type="number" id="other-item-price" name="other-item-price" min="0" placeholder="ราคา" 
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          </div>
+        </div>
+
+        <div>
+          <label for="other-item-image" class="block font-medium text-gray-700 mb-1">รูปภาพสินค้า</label>
+          <input type="file" id="other-item-image" name="other-item-image" accept="image/*"
+            class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4
+            file:rounded file:border-0 file:text-sm file:font-semibold
+            file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200" />
+        </div>
+
+        <button type="submit" 
+          class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+          เพิ่ม/แก้ไข รายการอื่น ๆ
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>

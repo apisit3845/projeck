@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ฟอร์มสั่งซื้อ ของที่ระลึก 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-100 to-white min-h-screen font-sans">
+
+  <header class="bg-green-600 text-white p-6 text-center text-2xl font-bold">
+    ฟอร์มสั่งซื้อ ของที่ระลึก 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์
+  </header>
+
+  <main class="max-w-3xl mx-auto p-6">
+
+    <form class="bg-white p-6 rounded-lg shadow-lg space-y-6" enctype="multipart/form-data">
+
+      <!-- ข้อมูลลูกค้า -->
+      <section>
+        <h2 class="text-xl font-semibold mb-4 border-b-2 border-green-400 pb-2">ข้อมูลลูกค้า</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="firstname" class="block font-medium text-gray-700 mb-1">ชื่อ</label>
+            <input type="text" id="firstname" name="firstname" required placeholder="ชื่อจริง"
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400" />
+          </div>
+          <div>
+            <label for="lastname" class="block font-medium text-gray-700 mb-1">นามสกุล</label>
+            <input type="text" id="lastname" name="lastname" required placeholder="นามสกุล"
+              class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400" />
+          </div>
+        </div>
+
+        <div>
+          <label for="address" class="block font-medium text-gray-700 mb-1">ที่อยู่</label>
+          <textarea id="address" name="address" rows="3" required placeholder="ที่อยู่สำหรับจัดส่ง"
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+        </div>
+
+        <div>
+          <label for="phone" class="block font-medium text-gray-700 mb-1">เบอร์โทรศัพท์</label>
+          <input type="tel" id="phone" name="phone" required placeholder="เบอร์โทร เช่น 08XXXXXXXX"
+            pattern="[0-9]{9,10}" 
+            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400" />
+        </div>
+      </section>
+
+      <!-- รายการสินค้า -->
+      <section>
+        <h2 class="text-xl font-semibold mb-4 border-b-2 border-green-400 pb-2">รายการสินค้า</h2>
+
+        <p class="mb-3 text-gray-600">กรุณาระบุชื่อสินค้า, สี, ขนาด, จำนวน ฯลฯ</p>
+        <textarea id="order-details" name="order-details" rows="4" required placeholder="เช่น เสื้อ สีขาว ขนาด M จำนวน 2 ตัว"
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"></textarea>
+      </section>
+
+      <!-- อัพโหลดรูป slip -->
+      <section>
+        <label for="payment-slip" class="block font-medium text-gray-700 mb-1">อัพโหลดรูป slip ชำระเงิน</label>
+        <input type="file" id="payment-slip" name="payment-slip" accept="image/*" required
+          class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4
+          file:rounded file:border-0 file:text-sm file:font-semibold
+          file:bg-green-100 file:text-green-700 hover:file:bg-green-200" />
+      </section>
+
+      <!-- วันที่ซื้อ -->
+      <section>
+        <label for="purchase-date" class="block font-medium text-gray-700 mb-1">วันที่ซื้อ</label>
+        <input type="date" id="purchase-date" name="purchase-date" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </section>
+
+      <!-- วิธีจัดส่ง -->
+      <section>
+        <label class="block font-medium text-gray-700 mb-1">วิธีจัดส่ง</label>
+        <div class="flex space-x-6">
+          <label class="inline-flex items-center">
+            <input type="radio" name="delivery-method" value="จัดส่ง" required
+              class="form-radio text-green-600" />
+            <span class="ml-2">จัดส่ง</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="radio" name="delivery-method" value="รับเอง" required
+              class="form-radio text-green-600" />
+            <span class="ml-2">รับเอง</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- ช่องทางชำระเงิน -->
+      <section>
+        <label class="block font-medium text-gray-700 mb-1">ช่องทางชำระเงิน</label>
+        <select name="payment-method" required
+          class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400">
+          <option value="" disabled selected>-- เลือกช่องทางชำระเงิน --</option>
+          <option>โอนผ่านธนาคาร</option>
+          <option>พร้อมเพย์</option>
+          <option>ชำระเงินปลายทาง</option>
+        </select>
+      </section>
+
+      <button type="submit" 
+        class="bg-green-600 text-white px-6 py-3 rounded w-full text-lg font-semibold hover:bg-green-700 transition">
+        ส่งคำสั่งซื้อ
+      </button>
+
+    </form>
+
+  </main>
+
+</body>
+</html>
